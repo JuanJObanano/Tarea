@@ -20,7 +20,7 @@ const weekData = [
 const CustomTooltip = ({ active, payload, label }) => {
   if (!active || !payload?.length) return null;
   return (
-    <darticleiv style={{
+    <article style={{
       background: "#fff", border: "1px solid rgba(26,26,46,0.08)",
       borderRadius: 8, padding: "10px 14px", fontSize: 13,
     }}>
