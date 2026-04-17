@@ -21,13 +21,11 @@ export default function Header({ activePath = "/", onNavigate }) {
 
   return (
     <aside className="sidebar">
-      {/* Logo */}
-      <div className="sidebar-logo">
-        <div className="logo-icon">📋</div>
+      <article className="sidebar-logo">
+        <article className="logo-icon">📋</article>
         <span className="logo-text">ParceLista</span>
-      </div>
+      </article>
 
-      {/* Nav */}
       <nav className="sidebar-nav">
         {navItems.map((item) => (
           <button
@@ -41,9 +39,8 @@ export default function Header({ activePath = "/", onNavigate }) {
         ))}
       </nav>
 
-      {/* Footer */}
-      <div className="sidebar-footer">
-        <div style={{ textAlign: "center", marginBottom: "12px" }}>
+      <article className="sidebar-footer">
+        <article style={{ textAlign: "center", marginBottom: "12px" }}>
           <span style={{
             fontFamily: "'Sora', sans-serif",
             fontSize: "13px",
@@ -52,12 +49,12 @@ export default function Header({ activePath = "/", onNavigate }) {
           }}>
             {clock}
           </span>
-        </div>
+        </article>
         <button className="mode-btn" onClick={() => setDarkMode(!darkMode)}>
           <span style={{ fontSize: "15px" }}>{darkMode ? "☀️" : "🌙"}</span>
           <span>{darkMode ? "Modo claro" : "Modo oscuro"}</span>
         </button>
-      </div>
+      </article>
     </aside>
   );
 }

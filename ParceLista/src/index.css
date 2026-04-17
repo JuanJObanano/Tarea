@@ -35,13 +35,11 @@ body {
   min-height: 100vh;
 }
 
-/* LAYOUT */
 .app-layout {
   display: flex;
   min-height: 100vh;
 }
 
-/* SIDEBAR */
 .sidebar {
   width: var(--sidebar-width);
   background: var(--sidebar-bg);
@@ -147,7 +145,6 @@ body {
   border-color: rgba(255,255,255,0.15);
 }
 
-/* MAIN CONTENT */
 .main-content {
   margin-left: var(--sidebar-width);
   flex: 1;
@@ -155,7 +152,6 @@ body {
   min-height: 100vh;
 }
 
-/* PAGE HEADER */
 .page-header {
   margin-bottom: 32px;
 }
@@ -174,7 +170,6 @@ body {
   color: var(--text-secondary);
 }
 
-/* STAT CARDS */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -241,7 +236,6 @@ body {
 .stat-badge.done  { background: var(--green-soft); color: #2a9d6b; }
 .stat-badge.pending { background: var(--red-soft); color: #c94444; }
 
-/* PROGRESS SECTION */
 .progress-section {
   background: var(--card-bg);
   border: 1px solid var(--border);
@@ -286,7 +280,6 @@ body {
   transition: width 0.6s ease;
 }
 
-/* CHART SECTION */
 .chart-section {
   background: var(--card-bg);
   border: 1px solid var(--border);
@@ -308,7 +301,6 @@ body {
   margin-bottom: 24px;
 }
 
-/* TASK LIST */
 .task-list {
   display: flex;
   flex-direction: column;
@@ -371,7 +363,6 @@ body {
   color: #c47d15;
 }
 
-/* ADD TASK */
 .add-task-row {
   display: flex;
   gap: 10px;
@@ -412,7 +403,6 @@ body {
 
 .btn-add:hover { opacity: 0.88; }
 
-/* CLOCK */
 .clock-badge {
   font-family: 'Sora', sans-serif;
   font-size: 13px;
@@ -424,7 +414,6 @@ body {
   color: var(--text-secondary);
 }
 
-/* HEADER BAR */
 .topbar {
   display: flex;
   align-items: center;
@@ -432,7 +421,6 @@ body {
   margin-bottom: 32px;
 }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
   .stats-grid { grid-template-columns: 1fr; }
   .sidebar { width: 64px; padding: 20px 8px; }

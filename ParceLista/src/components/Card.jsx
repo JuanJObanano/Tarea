@@ -1,9 +1,9 @@
 function Card({ titulo, descripcion }) {
   return (
-    <div className="card">
+    <article className="card">
       <h2>{titulo}</h2>
       <p>{descripcion}</p>
-    </div>
+    </article>
   );
 }
 

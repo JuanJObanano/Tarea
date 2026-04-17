@@ -7,17 +7,17 @@ export default function App() {
   const [activePath, setActivePath] = useState("/");
 
   return (
-    <div className="app-layout">
+    <article className="app-layout">
       <Header activePath={activePath} onNavigate={setActivePath} />
       {activePath === "/" && <Dashboard />}
       {activePath !== "/" && (
         <main className="main-content" style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-          <div style={{ textAlign: "center" }}>
+          <article style={{ textAlign: "center" }}>
             <p style={{ fontSize: 40, marginBottom: 12 }}>🚧</p>
             <p style={{ fontSize: 16, color: "var(--text-secondary)" }}>Sección en construcción</p>
-          </div>
+          </article>
         </main>
       )}
-    </div>
+    </article>
   );
 }

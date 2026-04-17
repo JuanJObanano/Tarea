@@ -20,7 +20,7 @@ const weekData = [
 const CustomTooltip = ({ active, payload, label }) => {
   if (!active || !payload?.length) return null;
   return (
-    <div style={{
+    <darticleiv style={{
       background: "#fff", border: "1px solid rgba(26,26,46,0.08)",
       borderRadius: 8, padding: "10px 14px", fontSize: 13,
     }}>
@@ -30,7 +30,7 @@ const CustomTooltip = ({ active, payload, label }) => {
           {p.name === "completadas" ? "✓ Completadas" : "● Tareas"}: {p.value}
         </p>
       ))}
-    </div>
+    </article>
   );
 };
 
@@ -62,57 +62,57 @@ export default function Dashboard() {
   return (
     <main className="main-content">
       {/* Top bar */}
-      <div className="topbar">
-        <div className="page-header" style={{ margin: 0 }}>
+      <article className="topbar">
+        <article className="page-header" style={{ margin: 0 }}>
           <h1>ParceLista</h1>
           <p style={{ textTransform: "capitalize" }}>{today}</p>
-        </div>
+        </article>
         <span className="clock-badge">
           {pct}% completado hoy
         </span>
-      </div>
+      </article>
 
       {/* Stats */}
-      <div className="stats-grid">
-        <div className="stat-card total">
-          <div className="stat-label">Total tareas</div>
-          <div className="stat-value">{total}</div>
+      <article className="stats-grid">
+        <article className="stat-card total">
+          <article className="stat-label">Total tareas</article>
+          <article className="stat-value">{total}</article>
           <span className="stat-badge total">📋 esta semana</span>
-        </div>
-        <div className="stat-card done">
-          <div className="stat-label">Completadas</div>
-          <div className="stat-value">{done}</div>
+        </article>
+        <article className="stat-card done">
+          <article className="stat-label">Completadas</article>
+          <article className="stat-value">{done}</article>
           <span className="stat-badge done">✓ muy bien</span>
-        </div>
-        <div className="stat-card pending">
-          <div className="stat-label">Pendientes</div>
-          <div className="stat-value">{pending}</div>
+        </article>
+        <article className="stat-card pending">
+          <article className="stat-label">Pendientes</article>
+          <article className="stat-value">{pending}</article>
           <span className="stat-badge pending">⏳ por hacer</span>
-        </div>
-      </div>
+        </article>
+      </article>
 
       {/* Progress */}
-      <div className="progress-section">
-        <div className="progress-header">
+      <article className="progress-section">
+        <article className="progress-header">
           <span className="progress-title">Progreso del día</span>
           <span className="progress-pct">{pct}%</span>
-        </div>
-        <div className="progress-track">
-          <div className="progress-fill" style={{ width: `${pct}%` }} />
-        </div>
+        </article>
+        <article className="progress-track">
+          <article className="progress-fill" style={{ width: `${pct}%` }} />
+        </article>
         <p style={{ fontSize: 12, color: "var(--text-light)", marginTop: 10 }}>
           {done} de {total} tareas completadas
         </p>
-      </div>
+      </article>
 
       {/* Two-column below */}
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+      <article style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
         {/* Tasks */}
-        <div className="chart-section">
-          <div className="section-title">Mis tareas</div>
-          <div className="section-sub">Márcalas a medida que avanzas</div>
+        <article className="chart-section">
+          <article className="section-title">Mis tareas</article>
+          <article className="section-sub">Márcalas a medida que avanzas</article>
 
-          <div className="add-task-row">
+          <article className="add-task-row">
             <input
               className="task-input"
               placeholder="Nueva tarea..."
@@ -121,30 +121,30 @@ export default function Dashboard() {
               onKeyDown={(e) => e.key === "Enter" && addTask()}
             />
             <button className="btn-add" onClick={addTask}>+ Agregar</button>
-          </div>
+          </article>
 
-          <div className="task-list">
+          <article className="task-list">
             {tasks.map((task) => (
-              <div key={task.id} className="task-item">
-                <div
+              <article key={task.id} className="task-item">
+                <article
                   className={`task-check${task.done ? " checked" : ""}`}
                   onClick={() => toggleTask(task.id)}
                 >
                   {task.done && "✓"}
-                </div>
+                </article>
                 <span className={`task-text${task.done ? " done" : ""}`}>
                   {task.text}
                 </span>
                 <span className="task-tag">{task.tag}</span>
-              </div>
+              </article>
             ))}
-          </div>
-        </div>
+          </article>
+        </article>
 
         {/* Chart */}
-        <div className="chart-section">
-          <div className="section-title">Rendimiento semanal</div>
-          <div className="section-sub">Tareas asignadas vs completadas</div>
+        <article className="chart-section">
+          <article className="section-title">Rendimiento semanal</article>
+          <article className="section-sub">Tareas asignadas vs completadas</article>
 
           <ResponsiveContainer width="100%" height={260}>
             <BarChart data={weekData} barGap={4} barCategoryGap="30%">
@@ -164,18 +164,18 @@ export default function Dashboard() {
             </BarChart>
           </ResponsiveContainer>
 
-          <div style={{ display: "flex", gap: 16, marginTop: 8 }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12, color: "var(--text-secondary)" }}>
+          <article style={{ display: "flex", gap: 16, marginTop: 8 }}>
+            <article style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12, color: "var(--text-secondary)" }}>
               <span style={{ width: 10, height: 10, borderRadius: 2, background: "rgba(233,166,58,0.4)", display: "inline-block" }} />
               Asignadas
-            </div>
-            <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12, color: "var(--text-secondary)" }}>
+            </article>
+            <article style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12, color: "var(--text-secondary)" }}>
               <span style={{ width: 10, height: 10, borderRadius: 2, background: "#4DC991", display: "inline-block" }} />
               Completadas
-            </div>
-          </div>
-        </div>
-      </div>
+            </article>
+          </article>
+        </article>
+      </article>
     </main>
   );
 }
