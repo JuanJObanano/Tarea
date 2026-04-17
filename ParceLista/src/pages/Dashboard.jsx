@@ -61,7 +61,6 @@ export default function Dashboard() {
 
   return (
     <main className="main-content">
-      {/* Top bar */}
       <article className="topbar">
         <article className="page-header" style={{ margin: 0 }}>
           <h1>ParceLista</h1>
@@ -72,7 +71,6 @@ export default function Dashboard() {
         </span>
       </article>
 
-      {/* Stats */}
       <article className="stats-grid">
         <article className="stat-card total">
           <article className="stat-label">Total tareas</article>
@@ -91,7 +89,6 @@ export default function Dashboard() {
         </article>
       </article>
 
-      {/* Progress */}
       <article className="progress-section">
         <article className="progress-header">
           <span className="progress-title">Progreso del día</span>
@@ -105,9 +102,7 @@ export default function Dashboard() {
         </p>
       </article>
 
-      {/* Two-column below */}
       <article style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
-        {/* Tasks */}
         <article className="chart-section">
           <article className="section-title">Mis tareas</article>
           <article className="section-sub">Márcalas a medida que avanzas</article>
@@ -141,7 +136,6 @@ export default function Dashboard() {
           </article>
         </article>
 
-        {/* Chart */}
         <article className="chart-section">
           <article className="section-title">Rendimiento semanal</article>
           <article className="section-sub">Tareas asignadas vs completadas</article>
